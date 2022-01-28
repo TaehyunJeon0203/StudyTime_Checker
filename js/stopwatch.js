@@ -1,23 +1,23 @@
-let timerId;
+let timerStatus;
 let time = 0;
 const mainstopwatch = document.getElementById("mainstopwatch");
 const substopwatch = document.getElementById("substopwatch");
 let hour, min, sec;
 
 function printTime() {
-    time++
+    time++;
     mainstopwatch.innerText = getTimeFormatString();
 }
 
 function startClock() {
     printTime();
     stopClock();
-    timerId = setTimeout(startClock, 1000);
+    timerStatus = setTimeout(startClock, 1000);
 }
 
 function stopClock() {
-    if (timerId = null) {
-        clearTimeout(timerId);
+    if (timerStatus != null) {
+        clearTimeout(timerStatus);
     }
 }
 
@@ -27,10 +27,12 @@ function lapClock() {
 
 function resetmainClock() {
     mainstopwatch.innerText = "00:00:00";
+    time = 0;
 }
 
 function resetsubClock() {
     mainsubwatch.innerText = "00:00:00";
+    time = 0;
 }
 
 
