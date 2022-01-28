@@ -12,20 +12,17 @@
         00:00:00
     </h1>
     <div>
-        <button onclick="startClock()">Start</button>
-        <button onclick="stopClock()">Stop</button>
-        <button onclick="lapClock()">Lap</button>
-        <button onclick="resetmainClock()">Reset</button>
+        <button id="mainFirstButton" onclick="mainFirstBtnClick()">Lap</button>
+        <button id="mainSecondButton" onclick="mainSecondBtnClick()">Start</button>
     </div>
     <h1 id = "substopwatch" >
         00:00:00
     </h1>
     <div>
-        <button onclick="startClock()">Start</button>
-        <button onclick="stopClock()">Stop</button>
-        <button onclick="lapClock()">Lap</button>
-        <button onclick="resetsubClock()">Reset</button>
+        <button id="subFirstButton" onclick="subFirstBtnClick()">Lap</button>
+        <button id="subSecondButton" onclick="subSecondBtnClick()">Start</button>
     </div>
-<script type="text/javascript" src="js/stopwatch.js"></script>
+<script type="text/javascript" src="js/mainstopwatch.js"></script>
+<script type="text/javascript" src="js/substopwatch.js"></script>
 </body>
 </html>
