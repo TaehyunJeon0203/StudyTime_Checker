@@ -2,7 +2,7 @@ let subTimerStatus;
 let subTime = 0;
 let subHour, subMin, subSec;
 
-const substopwatch = document.getElementById("substopwatch");
+const subStopwatch = document.getElementById("substopwatch");
 const subFirstButton = document.getElementById("subFirstButton");
 const subSecondButton = document.getElementById("subSecondButton");
 
@@ -20,42 +20,42 @@ function subSecondBtnClick() {
     if (subSecondButton.innerText == "Start") {
         subFirstButton.innerText = "Lap";
         subSecondButton.innerText = "Stop";
-        startClock();
+        startSubClock();
     }
     else if (subSecondButton.innerText == "Stop") {
         subFirstButton.innerText = "Reset";
         subSecondButton.innerText = "Start";
-        stopClock();
+        stopSubClock();
     }
 }
 
-function printTime() {
+function printSubTime() {
     subTime++;
-    substopwatch.innerText = getTimeFormatString();
+    substopwatch.innerText = getSubTimeFormatString();
 }
 
-function startClock() {
-    printTime();
-    stopClock();
-    subTimerStatus = setTimeout(startClock, 1000);
+function startSubClock() {
+    printSubTime();
+    stopSubClock();
+    subTimerStatus = setTimeout(startSubClock, 1000);
 }
 
-function stopClock() {
+function stopSubClock() {
     if (subTimerStatus != null) {
         clearTimeout(subTimerStatus);
     }
 }
 
-function lapClock() {
+function lapSubClock() {
     
 }
 
 function resetsubClock() {
-    mainstopwatch.innerText = "00:00:00";
+    subStopwatch.innerText = "00:00:00";
     subTime = 0;
 }
 
-function getTimeFormatString() {
+function getSubTimeFormatString() {
     subHour = parseInt(String(subTime / (60 * 60)));
     subMin = parseInt(String((subTime - (subHour * 60 * 60)) / 60));
     subSec = subTime % 60;

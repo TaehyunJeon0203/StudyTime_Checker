@@ -2,7 +2,7 @@ let mainTimerStatus;
 let mainTime = 0;
 let mainHour, mainMin, mainSec;
 
-const mainstopwatch = document.getElementById("mainstopwatch");
+const mainStopwatch = document.getElementById("mainstopwatch");
 const mainFirstButton = document.getElementById("mainFirstButton");
 const mainSecondButton = document.getElementById("mainSecondButton");
 
@@ -12,7 +12,7 @@ function mainFirstBtnClick() {
     }
     else if (mainFirstButton.innerText == "Reset") {
         mainFirstButton.innerText = "Lap";
-        resetmainClock();
+        resetMainClock();
     }
 }
 
@@ -20,42 +20,42 @@ function mainSecondBtnClick() {
     if (mainSecondButton.innerText == "Start") {
         mainFirstButton.innerText = "Lap";
         mainSecondButton.innerText = "Stop";
-        startClock();
+        startMainClock();
     }
     else if (mainSecondButton.innerText == "Stop") {
         mainFirstButton.innerText = "Reset";
         mainSecondButton.innerText = "Start";
-        stopClock();
+        stopMainClock();
     }
 }
 
-function printTime() {
+function printMainTime() {
     mainTime++;
-    mainstopwatch.innerText = getTimeFormatString();
+    mainstopwatch.innerText = getMainTimeFormatString();
 }
 
-function startClock() {
-    printTime();
-    stopClock();
-    mainTimerStatus = setTimeout(startClock, 1000);
+function startMainClock() {
+    printMainTime();
+    stopMainClock();
+    mainTimerStatus = setTimeout(startMainClock, 1000);
 }
 
-function stopClock() {
+function stopMainClock() {
     if (mainTimerStatus != null) {
         clearTimeout(mainTimerStatus);
     }
 }
 
-function lapClock() {
+function lapMainClock() {
     
 }
 
-function resetmainClock() {
-    mainstopwatch.innerText = "00:00:00";
+function resetMainClock() {
+    mainStopwatch.innerText = "00:00:00";
     mainTime = 0;
 }
 
-function getTimeFormatString() {
+function getMainTimeFormatString() {
     mainHour = parseInt(String(mainTime / (60 * 60)));
     mainMin = parseInt(String((mainTime - (mainHour * 60 * 60)) / 60));
     mainSec = mainTime % 60;
