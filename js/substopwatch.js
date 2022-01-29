@@ -31,7 +31,7 @@ function subSecondBtnClick() {
 
 function printSubTime() {
     subTime++;
-    substopwatch.innerText = getSubTimeFormatString();
+    subStopwatch.innerText = getSubTimeFormatString();
 }
 
 function startSubClock() {
