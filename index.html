@@ -8,19 +8,26 @@
     <link rel="stylesheet" herf="css/style.css">
 </head>
 <body>
-    <h1 id = "mainstopwatch" >
-        00:00:00
-    </h1>
     <div>
-        <button id="mainFirstButton" onclick="mainFirstBtnClick()">Lap</button>
-        <button id="mainSecondButton" onclick="mainSecondBtnClick()">Start</button>
+        <h1 id="mainstopwatch" >
+            00:00:00
+        </h1>
+        <div>
+            <button id="mainFirstButton" onclick="mainFirstBtnClick()">Lap</button>
+            <button id="mainSecondButton" onclick="mainSecondBtnClick()">Start</button>
+        </div>
+        <div>
+            <ul id="mainLapList"></ul>
+        </div>
     </div>
-    <h1 id = "substopwatch" >
-        00:00:00
-    </h1>
     <div>
-        <button id="subFirstButton" onclick="subFirstBtnClick()">Lap</button>
-        <button id="subSecondButton" onclick="subSecondBtnClick()">Start</button>
+        <h1 id = "substopwatch" >
+            00:00:00
+        </h1>
+        <div>
+            <button id="subFirstButton" onclick="subFirstBtnClick()">Lap</button>
+            <button id="subSecondButton" onclick="subSecondBtnClick()">Start</button>
+        </div>
     </div>
 <script type="text/javascript" src="js/mainstopwatch.js"></script>
 <script type="text/javascript" src="js/substopwatch.js"></script>

@@ -9,6 +9,7 @@ const subSecondButton = document.getElementById("subSecondButton");
 
 function subFirstBtnClick() {
     if (subFirstButton.innerText == "Lap") {
+        
     }
     else if (subFirstButton.innerText == "Reset") {
         subFirstButton.innerText = "Lap";

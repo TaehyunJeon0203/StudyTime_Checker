@@ -5,10 +5,12 @@ let mainHour, mainMin, mainSec;
 const mainStopwatch = document.getElementById("mainstopwatch");
 const mainFirstButton = document.getElementById("mainFirstButton");
 const mainSecondButton = document.getElementById("mainSecondButton");
+const mainLapList = document.getElementById("mainLapList");
 
 
 function mainFirstBtnClick() {
     if (mainFirstButton.innerText == "Lap") {
+
     }
     else if (mainFirstButton.innerText == "Reset") {
         mainFirstButton.innerText = "Lap";
@@ -31,7 +33,7 @@ function mainSecondBtnClick() {
 
 function printMainTime() {
     mainTime++;
-    mainstopwatch.innerText = getMainTimeFormatString();
+    mainStopwatch.innerText = getMainTimeFormatString();
 }
 
 function startMainClock() {
