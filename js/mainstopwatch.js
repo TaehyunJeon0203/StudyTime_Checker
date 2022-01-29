@@ -1,6 +1,6 @@
-let timerStatus;
-let time = 0;
-let hour, min, sec;
+let mainTimerStatus;
+let mainTime = 0;
+let mainHour, mainMin, mainSec;
 
 const mainstopwatch = document.getElementById("mainstopwatch");
 const mainFirstButton = document.getElementById("mainFirstButton");
@@ -30,19 +30,19 @@ function mainSecondBtnClick() {
 }
 
 function printTime() {
-    time++;
+    mainTime++;
     mainstopwatch.innerText = getTimeFormatString();
 }
 
 function startClock() {
     printTime();
     stopClock();
-    timerStatus = setTimeout(startClock, 1000);
+    mainTimerStatus = setTimeout(startClock, 1000);
 }
 
 function stopClock() {
-    if (timerStatus != null) {
-        clearTimeout(timerStatus);
+    if (mainTimerStatus != null) {
+        clearTimeout(mainTimerStatus);
     }
 }
 
@@ -52,15 +52,15 @@ function lapClock() {
 
 function resetmainClock() {
     mainstopwatch.innerText = "00:00:00";
-    time = 0;
+    mainTime = 0;
 }
 
 function getTimeFormatString() {
-    hour = parseInt(String(time / (60 * 60)));
-    min = parseInt(String((time - (hour * 60 * 60)) / 60));
-    sec = time % 60;
+    mainHour = parseInt(String(mainTime / (60 * 60)));
+    mainMin = parseInt(String((mainTime - (mainHour * 60 * 60)) / 60));
+    mainSec = mainTime % 60;
 
-    return String(hour).padStart(2, '0') + ":" + String(min).padStart(2, '0') + ":" + String(sec).padStart(2, '0');
+    return String(mainHour).padStart(2, '0') + ":" + String(mainMin).padStart(2, '0') + ":" + String(mainSec).padStart(2, '0');
 }
 
 
