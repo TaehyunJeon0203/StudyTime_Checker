@@ -10,7 +10,7 @@ const mainLapList = document.getElementById("mainLapList");
 
 function mainFirstBtnClick() {
     if (mainFirstButton.innerText == "Lap") {
-
+        lapMainClock();
     }
     else if (mainFirstButton.innerText == "Reset") {
         mainFirstButton.innerText = "Lap";
@@ -49,12 +49,20 @@ function stopMainClock() {
 }
 
 function lapMainClock() {
-    
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    span.innerText = mainStopwatch.innerText;
+    li.appendChild(span);
+    mainLapList.prepend(li);
 }
 
 function resetMainClock() {
-    mainStopwatch.innerText = "00:00:00";
+    mainStopwatch.innerText = "00:00:00"
     mainTime = 0;
+    const li = document.querySelectorAll("li");
+    for (let i=0; i<li.length; i++) {
+        mainLapList.removeChild(li[i]);
+    }
 }
 
 function getMainTimeFormatString() {
