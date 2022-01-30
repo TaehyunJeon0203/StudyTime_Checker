@@ -15,6 +15,7 @@ function mainFirstBtnClick() {
     else if (mainFirstButton.innerText == "Reset") {
         mainFirstButton.innerText = "Lap";
         resetMainClock();
+        resetMainLap();
     }
 }
 
@@ -59,6 +60,9 @@ function lapMainClock() {
 function resetMainClock() {
     mainStopwatch.innerText = "00:00:00"
     mainTime = 0;
+}
+
+function resetMainLap() {
     const li = document.querySelectorAll("li");
     for (let i=0; i<li.length; i++) {
         mainLapList.removeChild(li[i]);
