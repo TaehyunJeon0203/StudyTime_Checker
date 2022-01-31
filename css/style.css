@@ -1,4 +1,11 @@
-#mainLapArea {
+
+.mainLapArea {
+    height: 100px;
+    max-height: 100px;
+    overflow-y: scroll;
+}
+
+.subLapArea {
     height: 100px;
     max-height: 100px;
     overflow-y: scroll;

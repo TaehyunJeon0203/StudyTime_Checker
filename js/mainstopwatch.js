@@ -5,7 +5,7 @@ let mainHour, mainMin, mainSec;
 const mainStopwatch = document.getElementById("mainstopwatch");
 const mainFirstButton = document.getElementById("mainFirstButton");
 const mainSecondButton = document.getElementById("mainSecondButton");
-const mainLapList = document.getElementById("mainLapList");
+const mainLapList = document.querySelector(".mainLapList");
 
 
 function mainFirstBtnClick() {
@@ -57,17 +57,18 @@ function lapMainClock() {
     mainLapList.prepend(li);
 }
 
-function resetMainClock() {
-    mainStopwatch.innerText = "00:00:00"
-    mainTime = 0;
-}
-
 function resetMainLap() {
     const li = document.querySelectorAll("li");
     for (let i=0; i<li.length; i++) {
         mainLapList.removeChild(li[i]);
     }
 }
+
+function resetMainClock() {
+    mainStopwatch.innerText = "00:00:00"
+    mainTime = 0;
+}
+
 
 function getMainTimeFormatString() {
     mainHour = parseInt(String(mainTime / (60 * 60)));

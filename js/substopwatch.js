@@ -5,15 +5,17 @@ let subHour, subMin, subSec;
 const subStopwatch = document.getElementById("substopwatch");
 const subFirstButton = document.getElementById("subFirstButton");
 const subSecondButton = document.getElementById("subSecondButton");
+const subLapList = document.querySelector(".subLapList");
 
 
 function subFirstBtnClick() {
     if (subFirstButton.innerText == "Lap") {
-        
+        lapSubClock();
     }
     else if (subFirstButton.innerText == "Reset") {
         subFirstButton.innerText = "Lap";
         resetsubClock();
+        resetSubLap();
     }
 }
 
@@ -48,7 +50,18 @@ function stopSubClock() {
 }
 
 function lapSubClock() {
-    
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    span.innerText = subStopwatch.innerText;
+    li.appendChild(span);
+    subLapList.prepend(li);
+}
+
+function resetSubLap() {
+    const li = document.querySelectorAll("li");
+    for (let i=0; i<li.length; i++) {
+        subLapList.removeChild(li[i]);
+    }
 }
 
 function resetsubClock() {
