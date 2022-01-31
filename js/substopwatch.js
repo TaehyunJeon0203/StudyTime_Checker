@@ -10,7 +10,9 @@ const subLapList = document.querySelector(".subLapList");
 
 function subFirstBtnClick() {
     if (subFirstButton.innerText == "Lap") {
-        lapSubClock();
+        if (subStopwatch.innerText != "00:00:00") {
+            lapSubClock();
+        }
     }
     else if (subFirstButton.innerText == "Reset") {
         subFirstButton.innerText = "Lap";

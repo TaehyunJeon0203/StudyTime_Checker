@@ -10,7 +10,9 @@ const mainLapList = document.querySelector(".mainLapList");
 
 function mainFirstBtnClick() {
     if (mainFirstButton.innerText == "Lap") {
+        if (mainStopwatch.innerText != "00:00:00") {
         lapMainClock();
+        }
     }
     else if (mainFirstButton.innerText == "Reset") {
         mainFirstButton.innerText = "Lap";
