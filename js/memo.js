@@ -1,3 +1,5 @@
+let memovalue;
+
 function enterNote() {
-    
+
 }
