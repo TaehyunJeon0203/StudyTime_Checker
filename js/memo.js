@@ -33,7 +33,3 @@ function handleMemoSubmit() {
     memo.push(newMemoObj);
     saveMemo();
 }
-
-function enterNote() {
-
-} 
