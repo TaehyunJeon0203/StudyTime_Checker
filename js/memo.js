@@ -7,7 +7,7 @@ addMemoBtn.addEventListener("click" ,addMemo);
 
 function addMemo() {
     const memoInput = document.createElement("input");
-    memoInput.value = "Please enter a note";
+    memoInput.placeholder = "Please enter a note";
     memoArea.appendChild(memoInput); 
 }
 
