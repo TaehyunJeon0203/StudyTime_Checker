@@ -36,6 +36,26 @@
         <input type="text" placeholder="Write a To Do and Press Enter" required />
     </form>
     <ul id="todo-list"></ul>
+    <table id="calendar">
+        <thead>
+            <tr>
+                <td><button><</button></td>
+                <td id="yearmonthArea" colspan="3">year-month</td>
+                <td><button>></button></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>일</td>
+                <td>월</td>
+                <td>화</td>
+                <td>수</td>
+                <td>목</td>
+                <td>금</td>
+                <td>토</td>
+            </tr>
+        </tbody>
+    </table>
     <div id="memo" style="display:none">
         <button id="addmemobutton">Add Memo</button>
         <div id="memoarea"></div>
@@ -44,6 +64,7 @@
     <script src="js/mainstopwatch.js"></script>
     <script src="js/substopwatch.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/calender.js"></script>
     <script src="js/memo.js"></script>
 </body>
 </html>
