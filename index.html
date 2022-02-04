@@ -36,26 +36,28 @@
         <input type="text" placeholder="Write a To Do and Press Enter" required />
     </form>
     <ul id="todo-list"></ul>
-    <table id="calendar">
-        <thead>
-            <tr>
-                <td><button><</button></td>
-                <td id="yearmonthArea" colspan="3">year-month</td>
-                <td><button>></button></td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>일</td>
-                <td>월</td>
-                <td>화</td>
-                <td>수</td>
-                <td>목</td>
-                <td>금</td>
-                <td>토</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="calendar">
+        <div class="header">
+            <div class="year-month"></div>
+            <div class="nav">
+                <button class="nav-btn go-prev">&lt;</button>
+                <button class="nav-btn go-today">Today</button>
+                <button class="nav-btn go-next">&gt;</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="days">
+                <div class="day">일</div>
+                <div class="day">월</div>
+                <div class="day">화</div>
+                <div class="day">수</div>
+                <div class="day">목</div>
+                <div class="day">금</div>
+                <div class="day">토</div>
+            </div>
+            <div class="dates"></div>
+        </div>
+    </div>
     <div id="memo" style="display:none">
         <button id="addmemobutton">Add Memo</button>
         <div id="memoarea"></div>
