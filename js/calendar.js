@@ -18,3 +18,20 @@ const datesOfLastMonth = [];
 const datesOfThisMonth = [...Array(LTMDate + 1).keys()].slice(1);
 const datesOfNextMonth = [];
 
+if (LLMDay !== 6) {
+    for (let i=0; i<LLMDay+1; i++) {
+        datesOfLastMonth.unshift(LLMDate - i);
+    }
+}
+
+for (let i=1; i<7-LTMDay; i++) {
+    datesOfNextMonth.push(i);
+}
+
+const dates = datesOfLastMonth.concat(datesOfThisMonth, datesOfNextMonth);
+
+dates.forEach((date, i) => {
+    dates[i] = `<div class="date">${date}</div>`;
+})
+
+document.querySelector(".dates").innerHTML = dates.join('')
